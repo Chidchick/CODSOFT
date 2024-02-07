@@ -1,0 +1,51 @@
+#include <iostream>
+#include<cstdlib>
+#include <ctime>
+
+using namespace std;
+
+void start()
+{
+	cout << "||..." << "NUMBER GUESSING GAME." << "...||" << endl;
+}
+
+void randomNumber()
+{
+	int Rand;
+	int guess;
+	const int noOfTrials = 5;
+    int seed = time(0);
+    
+    srand(seed);
+	Rand = rand() % 10;
+}
+
+int main()
+{
+	start();
+	randomNumber();
+	
+for(int i = 0; i < noOfTrials; i++)
+{	
+	cout << "Number to guess: " << Rand << endl;
+	cout << "||..." << "HINT (From 0 - 9)" << "...||" << endl;
+	cout << "Input your guess: ";
+	cin >> guess;
+	
+	if (guess == Rand)
+	{
+		cout << "You guessed correctly." << endl;
+		
+		break;
+	}
+	else if (guess < Rand)
+	{
+		cout << "Too Low" << endl;
+	}
+	else if (guess > Rand)
+	{
+		cout << "Too high" << endl;
+	}
+	cout << "You are out of trials." << endl;
+}
+}
