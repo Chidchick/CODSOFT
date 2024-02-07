@@ -1,0 +1,74 @@
+#include <iostream>
+
+using namespace std;
+
+void top()
+
+{
+
+cout << "||...SIMPLE CALCULATOR...||" << endl;
+
+}
+
+int main()
+
+{
+
+top();
+
+int num1, num2, result;
+
+cout << "Enter a number: ";
+
+cin >> num1;
+
+cout << "Enter another number: ";
+
+cin >> num2;
+
+char op;
+
+cout << "Enter an operator (+, -, *, /); ";
+
+cin >> op;
+
+if (op =='+')
+
+{
+
+result = num1 + num2;
+
+cout << "RESULT = "<< result << endl;
+
+}
+
+else if (op == '-')
+
+{
+
+result = num1 - num2;
+
+cout << "RESULT = "<< result << endl;
+
+}
+
+else if (op == '*')
+
+{ 
+cout << "RESULT = " << num1 * num2 << endl;
+
+}
+
+else if (op == '/')
+
+{
+	 cout << "RESULT = " << num1 / num2 << endl;
+}
+
+else
+
+{ 
+cout << "You entered the wrong operator.";
+}
+}
+
